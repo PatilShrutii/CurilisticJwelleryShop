@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=PT+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'STIX Two Text', serif;
+}
+/* variables */
+:root{
+    --box-shawdow : 2px 2px 10px 4px rgb(14 55 54 /15% ); 
+    --beige : #ded0b672;
+    --brown : #b2a59b;
+    --green : #86a78962;
+    --text-color : #1b1b1b;
+}
+img{
+    width: 100%;
+}
+.copyrightTop{
+    display: flex;
+    flex-direction: row;
+    background: var(--beige);
+    
+}
+.copyrightTop i{
+    padding-top: 4px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+}
+.copyrightTop p{
+    color: var(--text-color);
+    padding-left: 280px;
+    padding-top: 5px;
+    font-size: 12px;
+    font-family: 'PT Mono', monospace;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    margin-bottom: 5px;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Adjust padding as needed */
+}
+header .shadow{
+    background: var(--text-color) ;
+    box-sizing: var(--box-shawdow) ;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Remove default list styles */
+   color: var(--brown);
+}
+header ul li{
+    padding-left:5px ;
+    padding-right: 20px;
+  
+}
+header ul li a{
+    color: var(--brown);
+    
+}
+header a:hover{
+    background: var(--brown);
+    color: white;
+    transition: 0.2s all linear ;
+    padding: 5px;
+    border-radius: 5px;
+}
+header .navIcons i{
+    padding-left:5px ;
+    padding-right: 20px;
+    color: var(--brown);
+    padding-right: 5px;
+}
+header .navIcons i:hover{
+    background: var(--brown);
+    color: white;
+    transition: 0.2s all linear ;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header .logo img {
+    width: 260px; 
+    height: 80px;
+    /* Adjust width of the logo image */
+}
+
+.banner {
+    position: relative; /* Add position relative to make z-index work */
+}
+
+.bannerImg {
+    position: absolute; /* Position the image absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the image to the background */
+    filter: brightness(500%);
+}
+
+.banner p {
+    z-index: 1; /* Bring the text in front of the image */
+    background: url(images/jwelleryBanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    padding: 90px;
+}
+.categories ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+}
+.categories .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px , auto));
+    gap: 1.3rem;
+    margin: 1.5rem;
+}
+.categories .container .box{
+    margin: 0.5rem 0.5rem;
+}
+.categories .container .box img{
+    width: 180px;
+    border-radius: 50%;
+    object-position: center;
+}
+ .content a{
+    color: var(--brown);
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-around;
+}
+.categories .container .box img:hover{
+    width: 200px;
+    transition: 0.3s all linear;
+}
+.goldSeries{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.goldSeries h3{
+    font-size: 48px;
+    font-weight: 400;
+    color:var(--brown);
+    margin-left: 25px;
+}
+.goldSeries .content p{
+    padding: 15px;
+    margin-left: 25px;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+.goldSeries .content a{
+    margin: 35px;
+    padding: 12px;
+    color: var(--text-color);
+    border: 1px solid var(--brown);
+    /*background: var(--main-color);*/
+    border-radius: 4px;
+    font-weight: 500;
+}
+.goldSeries .content a:hover{
+    background: var(--brown);
+    color: white;
+    padding: 20px;
+    transition: 0.3s all linear ;
+}
+.promise{
+    background: var(--beige);
+}
+.promise h3{
+    margin-right: 550px;
+    margin-left:  550px;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    color: #1b1b1bc3;
+}
+.promiseContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px; 
+     
+}
+.promiseContainer i{
+    font-size: 48px;
+    color: #33251e8d;
+    align-items: center;
+    padding: 33px;
+}
+.promiseContainer p{
+    font-size: 16px;
+    color: #33251e8d;
+    justify-content: space-around;
+}
+.lace{
+    background: var(--brown);
+}
+.lace h5{
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.652);
+    letter-spacing: 0.1rem;
+    padding: 5px;
+}
+.shopContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px , auto));
+    gap: 1.5rem;
+    margin: 2.0rem;
+}
+.shopContainer .box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shawdow); 
+}
+
+.shopContainer img{
+    width: 80%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    padding: 2px;
+    background: #f1f1f1ad;
+    
+}
+.shopContainer .shopBox h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem ;
+}
+.shopContainer .shopBox .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.shopContainer .shopBox .content span{
+    padding: 0 1rem;
+    color: var(--text-color);
+    /*background: var(--main-color);*/
+    border-radius: 4px;
+    font-weight: 500;
+}
+.shopContainer .shopBox .content a{
+    padding: 2px;
+    color: var(--text-color);
+    border: 1px solid var(--beige);
+    /*background: var(--main-color);*/
+    border-radius: 4px;
+    font-weight: 500;
+}
+.shopContainer .shopBox .content a:hover{
+    background: var(--brown);
+    color: var(white);
+    transition: 0.2s all linear ;
+    cursor: pointer;
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px , auto));
+    gap: 1.5rem;
+    margin: 2rem;
+}
+.gridContainer .gridBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shawdow); 
+}
+
+.gridContainer img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+    
+    background: #f1f1f1;
+    
+}
+.gridContainer .gridBox h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem ;
+    padding-left: 12px;
+}
+.gridContainer .gridBox .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.gridContainer .gridBox .content span{
+    padding: 0 1rem;
+    color: var(--text-color);
+    /*background: var(--main-color);*/
+    border-radius: 4px;
+    font-weight: 500;
+}
+.member{
+    background: var(--beige);
+    padding: 60px;
+}
+.member h3{
+    font-size: 28px;
+    color: #1b1b1bbe;
+    padding-left: 535px;
+    padding-bottom: 23px;
+}
+.member p{
+    color: #1b1b1bbe;
+    padding-left: 405px;
+    padding-bottom: 23px;
+    font-size: 15px;      
+}
+.member input{
+    color: var(--brown);
+    border: 1px solid var(--brown);
+    background: transparent;
+    padding-left: 5px;
+    padding-right: 180px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 440px;
+}
+
+.customerContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px , auto));
+    gap: 1.5rem;
+    margin: 2rem;
+
+}
+.customerContainer .box{
+    padding: 20px;
+   
+    text-align: center;
+}
+.stars .bx{
+    color: var(--text-color);
+}
+
+.customerContainer .box p{
+    font-size: 0.938rem;
+}
+
+.customerContainer .box img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.customerContainer :hover{
+    background: var(--beige);
+    transition: 0.3s all linear;
+}
+.customers .heading h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: 300;
+    padding-left: 550px;
+    margin: 2px;
+}
+.exclusive{
+    background: var(--green);
+    padding: 123px;
+}
+.exclusive h1{
+    font-size: 60px;
+    font-weight: 200;
+    padding-left: 450px;
+    color: #1b1b1bb2;
+}
+.exclusive p{
+    font-size: 23px;
+    padding-left: 300px;
+    padding-top: 5px;
+    color: #1b1b1bb2;
+}
+.exclusive .boxes{
+    padding-left: 450px;
+    padding-top: 20px;
+}
+.exclusive .content a{
+    border: 1px solid rgba(60, 79, 60, 0.826);
+    color:#1b1b1bb2 ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 20px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(240px , auto));
+    gap: 1.5rem;
+    background: var(--beige);
+    padding: 3px;
+}
+.footerBox h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footerBox p{
+    font-size: 0.938rem;
+    margin-bottom: 10px;
+}
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social a .bx{
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 10px;
+    background: var(--beige);
+    border-radius: 0.2rem;
+}
+.social a .bx:hover{
+    background: var(--brown);
+}
+.footerBox h3{
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.footerBox li a{
+    color: var(--text-color);
+    padding: 3px;
+}
+.footerBox li a:hover{
+    color: black;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.contact span{
+    display: flex;
+    align-items: center;  
+}
+.contact i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
